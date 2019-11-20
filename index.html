@@ -1,0 +1,39 @@
+<!-- ====== Tugas 39 JavaScript ===== -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Belajar Javascript - Niomic</title>
+</head>
+<body>
+  <button type="button" onclick="jalan()" name="button">Jalankan</button>
+  <br>
+  <br>
+  <hr>
+  <b>Active element</b> Property : <br>
+  <p id="activ">contoh</p>
+  <hr>
+  <b>addEvenListener()</b> Property : <br>
+  <p id="evenlistener">contoh</p>
+  <hr>
+  <b>Anchor</b> Property (
+  <a name="jeruk" href="#">Jeruk</a> ,
+  <a name="semangka" href="#">Semangka</a>) : <br>
+  <p id="anchorr">contoh</p>
+  <hr>
+
+  <script type="text/javascript">
+    function jalan() {
+      var a = document.activeElement.tagName;
+      document.getElementById("activ").innerHTML = a;
+      document.addEventListener('click',function(){
+    	document.getElementById('evenlistener').innerHTML = 'Sukses! Merubah addEventListener()'
+      })
+      var b = document.anchors.length;
+      document.getElementById("anchorr").innerHTML = b;
+    }
+  </script>
+</body>
+
+</html>
